@@ -54,7 +54,7 @@ class UniScraper:
         dropdown = Select(dropdown_element)
 
         # Iterate over all countries (skipping the first placeholder)
-        start_after_country = "مالي"
+        start_after_country = "بريطانيا"
         skip = True
 
         for index, option in enumerate(dropdown.options):
@@ -95,7 +95,7 @@ class UniScraper:
                     pass
 
                 # Pagination and scraping for universities
-                start_after_uni = "LIFE CHIROPRACTIC COLLEGE-WEST"  # <-- Change to your university name
+                start_after_uni = "McMaster University"  # <-- Change to your university name
                 skip_uni = True
 
                 page = 1
@@ -129,7 +129,6 @@ class UniScraper:
                             uni_name = uni_link.text
                             print(f"🎯 Visiting: {uni_name}")
 
-                            # Skip universities until we find the target one
                             if skip_uni and uni_name != start_after_uni:
                                 print(f"⏭️ Skipping university: {uni_name}")
                                 row_index += 1
