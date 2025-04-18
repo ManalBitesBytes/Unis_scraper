@@ -54,7 +54,7 @@ class UniScraper:
         dropdown = Select(dropdown_element)
 
         # Iterate over all countries (skipping the first placeholder)
-        start_after_country = "الصين"
+        start_after_country = "اليابان"
         skip = True
 
         for index, option in enumerate(dropdown.options):
